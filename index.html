@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma & Pemrograman</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="hero">
+
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <p class="subtitle">Ringkasan Materi</p>
+
+                <h1>
+                    Algoritma & <br>
+                    Pemrograman
+                </h1>
+
+                <p class="description">
+                    Ringkasan materi praktikum algoritma dan pemrograman menggunakan bahasa Python.
+                </p>
+            </div>
+
+            <div class="info-box">
+
+                <div class="info-item">
+                    <h3>Mata Kuliah</h3>
+                    <p>Algoritma & Pemrograman</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Bahasa</h3>
+                    <p>Python 3.x</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Imlementasi</h3>
+                    <p>Praktikum</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <button class="tab-btn active" onclick="showTab('pendahuluan')">
+            Pendahuluan
+        </button>
+
+        <button class="tab-btn" onclick="showTab('sekuensial')">
+            Sekuensial
+        </button>
+
+        <button class="tab-btn" onclick="showTab('for')">
+            Perulangan For
+        </button>
+
+        <button class="tab-btn" onclick="showTab('while')">
+            Perulangan While
+        </button>
+
+        <button class="tab-btn" onclick="showTab('dowhile')">
+            Do-While
+        </button>
+
+        <button class="tab-btn" onclick="showTab('nested')">
+            Nested Loop
+        </button>
+
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="container">
+
+        <!-- PENDAHULUAN -->
+        <section id="pendahuluan" class="content active">
+
+            <div class="card">
+
+                <h2>Tentang Saya</h2>
+
+                <p><strong>Nama :</strong> Novia Nurahmadani</p>
+                <p><strong>NIM :</strong> 250403010035</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Daftar Isi</h2>
+
+                <ol>
+                    <li>Sekuensial</li>
+                    <li>Perulangan For</li>
+                    <li>Perulangan While</li>
+                    <li>Struktur Do-While</li>
+                    <li>Perulangan Bersarang</li>
+                </ol>
+
+            </div>
+
+        </section>
+
+        <!-- SEKUENSIAL -->
+        <section id="sekuensial" class="content">
+
+            <div class="card">
+
+                <h2>1. Pengertian</h2>
+
+                <p>
+                    Algoritma sekuensial adalah jenis algoritma yang
+                    mengeksekusi instruksi secara berurutan, satu per satu,
+                    dari awal hingga akhir.
+                </p>
+
+                <p>
+                    Konsep ini merupakan bagian fundamental dari dasar-dasar
+                    pemrograman terstruktur yang harus dikuasai setiap programmer.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>2. Contoh Kasus</h2>
+
+                <p>Menghitung jual beli susu sapi segar.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>3. Pseudocode</h2>
+
+<pre>
+PROGRAM Menghitung Jual Beli Susu Sapi Segar
+
+DEKLARASI
+harga_susu : float = 11.5
+nama : string
+tanggal : string
+jumlah : float
+total : float
+
+ALGORITMA
+input nama
+input tanggal
+input jumlah
+
+total = jumlah * harga_susu
+
+output nama
+output tanggal
+output total
+
+SELESAI
+</pre>
+
+            </div>
+
+            <div class="card">
+
+                <h2>4. Flowchart</h2>
+
+                <img src="images/flowchart-sekuensial.png"
+                     alt="Flowchart Sekuensial"
+                     class="flowchart">
+            </div>
+
+            <div class="card">
+
+                <h2>5. Program Python</h2>
+
+<pre>
+# Program Menghitung Jual Beli Susu Sapi Segar
+
+harga_susu = 11.5
+
+nama = input("Masukkan nama pembeli : ")
+tanggal = input("Masukkan hari dan tanggal : ")
+jumlah = float(input("Masukkan jumlah liter susu : "))
+
+total = jumlah * harga_susu
+
+print("\n======== STRUK PEMBELIAN ========")
+print("Nama Pembeli       :", nama)
+print("Tanggal Pembelian  :", tanggal)
+print("Jumlah Liter       :", jumlah, "liter")
+print("Harga per Liter    : Rp", harga_susu)
+print("Total yang Dibayar : Rp", total)
+</pre>
+
+            </div>
+
+        </section>
+        <!-- PERULANGAN FOR -->
+        <section id="for" class="content">
+
+            <div class="card">
+                <h2>1. Pengertian</h2>
+
+                <p>
+                    Algoritma perulangan for adalah struktur kontrol dalam
+                    pemrograman yang digunakan untuk mengeksekusi suatu blok
+                    kode secara berulang dengan jumlah iterasi yang sudah
+                    diketahui atau ditentukan sebelumnya.
+                </p>
+
+                <ul>
+                    <li>Inisialisasi</li>
+                    <li>Kondisi</li>
+                    <li>Increment / Decrement</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>2. Contoh Kasus</h2>
+                <p>Menghitung total liter susu yang terjual selama 7 hari.</p>
+            </div>
+
+            <div class="card">
+                <h2>3. Pseudocode</h2>
+
+<pre>
+PROGRAM Menghitung Total Penjualan Susu
+
+DEKLARASI
+i : integer
+liter, total : float
+
+total ← 0
+
+UNTUK i ← 1 sampai 7 lakukan
+    input liter
+    total ← total + liter
+SELESAI UNTUK
+
+output total
+
+SELESAI
+</pre>
+
+            </div>
+
+            <div class="card">
+                <h2>4. Program Python</h2>
+
+<pre>
+# Menghitung total penjualan susu selama 7 hari
+
+total = 0
+
+for i in range(1, 8):
+    liter = float(input(f"Masukkan penjualan hari ke-{i} (liter): "))
+    total = total + liter
+
+print("\nTotal susu terjual selama 7 hari =", total, "liter")
+</pre>
+
+<h3>Output Program</h3>
+
+<pre>
+Masukkan penjualan hari ke-1 (liter): 10
+Masukkan penjualan hari ke-2 (liter): 12
+Masukkan penjualan hari ke-3 (liter): 8
+Masukkan penjualan hari ke-4 (liter): 15
+Masukkan penjualan hari ke-5 (liter): 9
+Masukkan penjualan hari ke-6 (liter): 11
+Masukkan penjualan hari ke-7 (liter): 13
+
+Total susu terjual selama 7 hari = 78.0 liter
+</pre>
+
+            </div>
+
+        </section>
+
+        <!-- PERULANGAN WHILE -->
+        <section id="while" class="content">
+
+            <div class="card">
+
+                <h2>1. Pengertian</h2>
+
+                <p>
+                    Algoritma perulangan while adalah salah satu bentuk
+                    looping dalam pemrograman yang digunakan untuk
+                    menjalankan suatu blok kode berulang kali selama
+                    kondisi tertentu bernilai benar.
+                </p>
+
+                <ul>
+                    <li>Kondisi dicek di awal.</li>
+                    <li>Jumlah perulangan tidak pasti.</li>
+                    <li>Bergantung pada kondisi tertentu.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>2. Contoh Kasus</h2>
+
+                <p>
+                    Menghitung total pembelian susu sampai pembeli
+                    selesai berbelanja.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>3. Pseudocode</h2>
+
+<pre>
+PROGRAM Menghitung Total Pembelian Susu
+
+DEKLARASI
+jumlah : float
+total : float
+
+total ← 0
+
+input jumlah
+
+WHILE jumlah ≠ 0 DO
+    total ← total + jumlah
+    input jumlah
+END WHILE
+
+output total
+
+SELESAI
+</pre>
+
+            </div>
+
+            <div class="card">
+
+                <h2>4. Program Python</h2>
+
+<pre>
+# Menghitung total pembelian susu
+
+total = 0
+
+jumlah = float(input(
+"Masukkan jumlah liter susu (0 untuk selesai): "
+))
+
+while jumlah != 0:
+    total = total + jumlah
+
+    jumlah = float(input(
+    "Masukkan jumlah liter susu (0 untuk selesai): "
+    ))
+
+print("\nTotal susu yang dibeli =", total, "liter")
+</pre>
+
+<h3>Output Program</h3>
+
+<pre>
+Masukkan jumlah liter susu (0 untuk selesai): 2
+Masukkan jumlah liter susu (0 untuk selesai): 1.5
+Masukkan jumlah liter susu (0 untuk selesai): 3
+Masukkan jumlah liter susu (0 untuk selesai): 0
+
+Total susu yang dibeli = 6.5 liter
+</pre>
+
+            </div>
+
+        </section>
+        <!-- DO WHILE -->
+        <section id="dowhile" class="content">
+
+            <div class="card">
+
+                <h2>1. Pengertian</h2>
+
+                <p>
+                    Algoritma perulangan do-while adalah bentuk
+                    pengulangan yang menjalankan blok kode minimal
+                    satu kali, lalu memeriksa kondisi di akhir
+                    perulangan untuk menentukan apakah proses
+                    akan diulang kembali.
+                </p>
+
+                <h3>Ciri Utama</h3>
+
+                <ul>
+                    <li>Kondisi diperiksa di akhir (post-test loop).</li>
+                    <li>Blok kode dijalankan minimal satu kali.</li>
+                    <li>Cocok digunakan untuk validasi input.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>2. Program Python</h2>
+
+<pre>
+# Contoh simulasi do-while di Python
+
+while True:
+    try:
+        angka = int(input(
+        "Masukkan angka positif: "
+        ))
+
+    except ValueError:
+        print("Input harus berupa angka!")
+        continue
+
+    if angka > 0:
+        print(f"Anda memasukkan angka {angka}")
+        break
+    else:
+        print("Angka harus positif, coba lagi.")
+</pre>
+
+<h3>Output Program</h3>
+
+<pre>
+Masukkan angka positif: 10
+Anda memasukkan angka 10
+</pre>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Penjelasan Kode</h2>
+
+                <ul>
+                    <li><b>while True</b> membuat loop tanpa batas.</li>
+                    <li><b>break</b> menghentikan perulangan.</li>
+                    <li><b>continue</b> mengulangi perulangan.</li>
+                    <li><b>try-except</b> menangani kesalahan input.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- NESTED LOOP -->
+        <section id="nested" class="content">
+
+            <div class="card">
+
+                <h2>1. Pengertian</h2>
+
+                <p>
+                    Perulangan bersarang (nested loop) adalah
+                    struktur perulangan di dalam perulangan lain.
+                </p>
+
+                <p>
+                    Satu loop akan berjalan, kemudian di dalamnya
+                    terdapat loop lain yang berjalan untuk setiap
+                    iterasi loop luar.
+                </p>
+
+                <h3>Kegunaan Nested Loop</h3>
+
+                <ul>
+                    <li>Mengakses matriks atau data 2 dimensi.</li>
+                    <li>Membuat pola bintang.</li>
+                    <li>Kombinasi dan permutasi.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>2. Contoh Kasus</h2>
+
+                <p>
+                    Mencatat penjualan susu selama 3 minggu,
+                    dimana setiap minggu terdiri dari 7 hari.
+                </p>
+
+                <ul>
+                    <li>Loop luar = minggu</li>
+                    <li>Loop dalam = hari</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>3. Pseudocode</h2>
+
+<pre>
+PROGRAM Penjualan Susu 3 Minggu
+
+DEKLARASI
+minggu, hari : integer
+liter : float
+
+UNTUK minggu ← 1 sampai 3 lakukan
+
+    output "Minggu ke-", minggu
+
+    UNTUK hari ← 1 sampai 7 lakukan
+        input liter
+    SELESAI UNTUK
+
+SELESAI UNTUK
+
+SELESAI
+</pre>
+
+            </div>
+
+            <div class="card">
+
+                <h2>4. Program Python</h2>
+
+<pre>
+# Penjualan susu selama 3 minggu
+
+for minggu in range(1, 4):
+
+    print(f"\n=== Minggu ke-{minggu} ===")
+
+    for hari in range(1, 8):
+
+        liter = float(
+        input(f"Penjualan hari ke-{hari} (liter): ")
+        )
+</pre>
+
+<h3>Output Program</h3>
+
+<pre>
+=== Minggu ke-1 ===
+Penjualan hari ke-1 (liter): 10
+Penjualan hari ke-2 (liter): 12
+...
+Penjualan hari ke-7 (liter): 9
+
+=== Minggu ke-2 ===
+Penjualan hari ke-1 (liter): 15
+...
+</pre>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            © 2026 | Ringkasan Materi Algoritma & Pemrograman
+            | Novia Nurahmadani
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>  
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
